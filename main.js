@@ -4,7 +4,9 @@
 //const rest = require("./ex04")
 //const flatten = require("./ex05")
 //const without = require("./ex06")
-const union = require("./ex07")
+//const union = require("./ex07")
+const intersection = require("./ex08")
+
 
 
 
@@ -15,4 +17,5 @@ const union = require("./ex07")
 //console.log(rest([5, 4, 3, 2, 1], 2))
 //console.log(flatten([1, [2], [3, [[4]]]], 4))
 //console.log(without([1, 2, 1, 0, 3, 1, 4], 0, 1))
-console.log(union([1, 2, 3], [101, 2, 10], [2, 1]))
+//console.log(union([1, 2, 3], [101, 2, 10], [2, 1]))
+console.log(intersection([1, 2, 3], [101, 2, 10], [2, 1]))
