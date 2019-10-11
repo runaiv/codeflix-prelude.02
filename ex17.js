@@ -1,4 +1,4 @@
-function pick(obj, ...options) {
+    function omit(obj, ...options) {
     const [firstOpts] = options
   
     const newObj = {}
@@ -8,18 +8,21 @@ function pick(obj, ...options) {
   
       // with callback
       for (const item of Object.entries(obj)) {
-        const [key, value] = item
+        const [key, value] = item   
         if (callback(value, key) === true) {
           newObj[key] = obj[key]
         }
       }
     } else {
       // with keys
-      for (const key of options) {
-        if (obj[key] !== undefined) {
-          newObj[key] = obj[key]
+        for(const [item] of Object.entries(obj)){
+            for (const key of options) {
+                if (item != key) {
+                newObj[item] = obj[item]
+                }
+
+            }
         }
-      }
     }
     return newObj
   }
@@ -30,9 +33,9 @@ function pick(obj, ...options) {
     age: 18
   }
   
-  console.log(pick(user, 'firstname', 'age'))
+  console.log(omit(user, 'firstname'))
   console.log(
-    pick(user, function(value, key) {
+    omit(user, function(value, key) {
       return Number.isInteger(value)
     })
   )

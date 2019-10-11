@@ -10,7 +10,10 @@
 //const values = require("./ex13")
 //const invert = require("./ex15")
 //const pick = require("./ex16")
-const map = require("./ex21")
+//const map = require("./ex21")
+//const has = require("./ex18")
+//const size = require("./ex19")
+const sample = require("./ex20")
 
 
 
@@ -29,4 +32,7 @@ const map = require("./ex21")
 //console.log(values({one : 1, two :  2, three : 3}))
 //console.log(invert({Moe : "Mosses", Larry : "Louis", Curly : "Jeerome"}))
 //console.log(pick({name : "Mosses", age : 50, userid : "moel"}, 'name', 'age'))
-console.log(map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3}))
+//console.log(map({one : 1, two : 2, three : 3}, function(num, key){ return num * 3}))
+//console.log(has({one : 1, two : 2, three : 3}, 'one'))
+//console.log(size([1, 2, 3, 5, 4]))
+console.log(sample([1, 2, 3, 5, 4], 3))
